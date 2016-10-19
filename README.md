@@ -1,6 +1,6 @@
-# vue-demo
+# vue-cnode
 
-> a vue test demo
+> a vue  demo from cnode
 
 ## Build Setup
 
