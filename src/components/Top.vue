@@ -16,12 +16,15 @@ export default {
 </script>
 <style>
   .top-title{
+    position:fixed;
+    top:0;
+    z-index:999;
     width:100%;
     height:40px;
     line-height:40px;
     background-color:#35495e;
     color:#fff;
-    font-size:16px;
+    font-size:20px;
     font-weight:800;
     text-align:center;
   }

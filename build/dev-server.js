@@ -34,12 +34,13 @@ compiler.plugin('compilation', function (compilation) {
   })
 })
 
-// proxy api requests
+//代理配置
 Object.keys(proxyTable).forEach(function (context) {
   var options = proxyTable[context]
   if (typeof options === 'string') {
-    options = { target: options }
+    options = { target: options,changeOrigin: true}
   }
+  console.log(options);
   app.use(proxyMiddleware(context, options))
 })
 
@@ -56,7 +57,6 @@ app.use(hotMiddleware)
 // serve pure static assets
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
-
 module.exports = app.listen(port, function (err) {
   if (err) {
     console.log(err)
@@ -64,5 +64,6 @@ module.exports = app.listen(port, function (err) {
   }
   var uri = 'http://localhost:' + port
   console.log('Listening at ' + uri + '\n')
+  //启动浏览器访问
   opn(uri)
 })

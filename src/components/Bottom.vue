@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'Top',
+  name: 'Bottom',
   data () {
     return {
       items: [
@@ -26,15 +26,17 @@ export default {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin:0;
     width:100%;
+    background-color:#F5FFFA;
     list-style:none;
   }
   .bottom-ul li{
     display: block;
+    position:relative;
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    padding: 7px 0 0;
     color:#888;
     line-height:40px;
     font-size:12px;

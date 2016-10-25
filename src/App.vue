@@ -4,17 +4,22 @@
     <div id="bottom">
       <Bottom></Bottom>
     </div>
+    <div class="container">
+      <Topics></Topics>
+    </div>
   </div>
 </template>
 
 <script>
 import Top from './components/Top'
 import Bottom from './components/Bottom'
+import Topics from './components/Topics'
 export default {
   name: 'app',
   components: {
     'Top': Top,
-    'Bottom': Bottom
+    'Bottom': Bottom,
+    'Topics': Topics
   }
 }
 </script>
@@ -25,10 +30,11 @@ export default {
     width:100%;
   }
   #bottom{
-    position:absolute;
+    position:fixed;
     width:100%;
     height:40px;
     bottom:0;
+    z-index:9999;
   }
   #bottom:before{
     content: " ";
@@ -43,5 +49,9 @@ export default {
     transform-origin: 0 0;
     -webkit-transform: scaleY(.5);
     transform: scaleY(.5);
+
+  }
+  .container{
+    padding-bottom:40px;
   }
 </style>
