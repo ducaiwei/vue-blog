@@ -1,8 +1,26 @@
 import Vue from 'vue'
+import VueRouter from 'vue-router'
 import App from './App'
+import ChatRoom from './ChatRoom'
+import Topics from './components/Topics'
 import './assets/css/normalize.css'
 /* eslint-disable no-new */
-
+Vue.use(VueRouter)
+const router = new VueRouter({
+	mode: 'history',
+	base: __dirname,
+	routes: [
+	{
+		path: '',
+		component: Topics
+	},
+	{
+		path: '/chat',
+		component: ChatRoom
+	}
+	]
+});
 new Vue({
-  render: h => h(App)
+	router: router,
+  	render: h => h(App)
 }).$mount('#app')

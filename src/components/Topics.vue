@@ -3,20 +3,24 @@
 **/
 <template>
 	<div class="topic-container">
-		<div>
-
+		<div class="loading" v-if="topics.length == 0">
+			小v正在努力加载中....
 		</div>
 		<ul>
 			<li class="topic-li" v-for="topic in topics">
 				<a href="">
-					<img class="topic-author-img" v-bind:src="imageSrc" />
-					<div>{{ topic.title }}</div>
+					<img class="topic-author-img" :src="topic.author.avatar_url" />
+					<div class="topic-title">{{ topic.title }}</div>
 				</a>
 			</li>
 		</ul>
 	</div>
 </template>
 <style>
+	.loading{
+		font-size:14px;
+		text-align:center;
+	}
 	.topic-container{
 		display:block;
 		width:100%;
@@ -59,6 +63,13 @@
 	}
 	.topic-author-img{
 		display:inline-block;
+		width:25px;
+		height:25px;
+		border-radius:50%;
+		vertical-align:middle;
+	}
+	.topic-title{
+		display:inline-block;
 	}
 </style>
 <script>
@@ -80,14 +91,12 @@
 				success: function (data) {
 					if(data.success){//请求成功
 						var d = data.data;
-						console.log(d);
 						_this.topics = d;
 					}else{
 						return {msg:data.success};
 					}
 				},
 				error: function () {
-
 				}  
 			})
 		}

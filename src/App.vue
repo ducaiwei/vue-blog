@@ -1,25 +1,25 @@
 <template>
+    
   <div id="app">
-    <Top></Top>
+    <Top title="vue-demo"></Top>
+    <transition name="fade" mode="out-in">
+        <router-view class="view"></router-view>
+    </transition>
     <div id="bottom">
       <Bottom></Bottom>
     </div>
-    <div class="container">
-      <Topics></Topics>
-    </div>
+    
   </div>
 </template>
 
 <script>
 import Top from './components/Top'
 import Bottom from './components/Bottom'
-import Topics from './components/Topics'
 export default {
   name: 'app',
   components: {
     'Top': Top,
-    'Bottom': Bottom,
-    'Topics': Topics
+    'Bottom': Bottom
   }
 }
 </script>
@@ -49,9 +49,9 @@ export default {
     transform-origin: 0 0;
     -webkit-transform: scaleY(.5);
     transform: scaleY(.5);
-
   }
-  .container{
+  .view{
+    padding-top:40px;
     padding-bottom:40px;
   }
 </style>

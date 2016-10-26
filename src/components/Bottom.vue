@@ -1,7 +1,7 @@
 <template>
     <ul class="bottom-ul">
-      <li v-for="item in items">
-        {{ item.msg }}
+      <li :class="{'on':item.isOn}" v-for="item in items">
+        <router-link :to="item.linkTo">{{ item.msg }}</router-link>
       </li>
     </ul>
 </template>
@@ -12,10 +12,10 @@ export default {
   data () {
     return {
       items: [
-        { msg: '首页' },
-        { msg: '精华' },
-        { msg: '分享' },
-        { msg: '我的' }
+        { msg: '首页' , isOn:true , linkTo:''},
+        { msg: '聊天室' , isOn:false , linkTo:'/chat' },
+        { msg: '分享' , isOn:false , linkTo:'/chat' },
+        { msg: '我的' , isOn:false , linkTo:'/chat' }
       ]
     }
   }
@@ -40,5 +40,8 @@ export default {
     color:#888;
     line-height:40px;
     font-size:12px;
+  }
+  .bottom-ul li.on{
+    color:red;
   }
 </style>
