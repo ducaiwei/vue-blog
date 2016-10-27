@@ -2,9 +2,7 @@
     
   <div id="app">
     <Top title="vue-demo"></Top>
-    <transition name="fade" mode="out-in">
         <router-view class="view"></router-view>
-    </transition>
     <div id="bottom">
       <Bottom></Bottom>
     </div>

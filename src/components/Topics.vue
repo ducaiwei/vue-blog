@@ -2,19 +2,19 @@
 *话题组件
 **/
 <template>
-	<div class="topic-container">
-		<div class="loading" v-if="topics.length == 0">
-			小v正在努力加载中....
+		<div class="topic-container">
+			<div class="loading" v-if="topics.length == 0">
+				小v正在努力加载中....
+			</div>
+			<ul>
+				<li class="topic-li" v-for="topic in topics">
+					<a href="">
+						<img class="topic-author-img" :src="topic.author.avatar_url" />
+						<div class="topic-title">{{ topic.title }}</div>
+					</a>
+				</li>
+			</ul>
 		</div>
-		<ul>
-			<li class="topic-li" v-for="topic in topics">
-				<a href="">
-					<img class="topic-author-img" :src="topic.author.avatar_url" />
-					<div class="topic-title">{{ topic.title }}</div>
-				</a>
-			</li>
-		</ul>
-	</div>
 </template>
 <style>
 	.loading{

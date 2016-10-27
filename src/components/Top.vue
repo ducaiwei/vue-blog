@@ -9,7 +9,7 @@ export default {
   name: 'Top',
   data () {
     return {
-      msg: 'vue-cnode'
+      msg: 'vue-blog'
     }
   }
 }

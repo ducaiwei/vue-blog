@@ -13,7 +13,7 @@ export default {
     return {
       items: [
         { msg: '首页' , isOn:true , linkTo:'/'},
-        { msg: '聊天室' , isOn:false , linkTo:'/chat' },
+        { msg: '唠嗑' , isOn:false , linkTo:'/chat' },
         { msg: '分享' , isOn:false , linkTo:'/share' },
         { msg: '我的' , isOn:false , linkTo:'/my' }
       ]
