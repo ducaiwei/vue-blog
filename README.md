@@ -31,6 +31,7 @@ Topics主键，Topics数据通过用http-proxy-middleware代理到cnode获取的
 在main.js中注册vue-router,底部导航菜单加上router-link。实现了单页路由。
 
 待完善的功能
+
 群聊天，个人中心，技术分享
 
 > a vue test demo
