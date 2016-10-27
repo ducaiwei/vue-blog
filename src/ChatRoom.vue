@@ -3,7 +3,9 @@
     <div class="chat-top">
     	<img src="/static/chat-top.jpg" class="chat-top-img"/>
     	<div>
-    		<p class="chat-name-title">人在江湖飘，全靠名号骚</p>
+    		<p class="chat-name-title"></p>
+    		<div>
+    		</div>
     	</div>
     </div>
   </div>

@@ -1,24 +1,29 @@
 # vue-demo
+新手用vue2.0 写的demo 
+现在将菜鸟的流程分享给大家
+
+vue概念 
 
 > a vue test demo
 
 ## Build Setup
 
 ``` bash
-# install dependencies
+# 安装项目依赖包
 npm install
 
-# serve with hot reload at localhost:8080
+# 启动本地开发服务
 npm run dev
 
-# build for production with minification
+# 生产环境构建命令
 npm run build
 
-# run unit tests
+# 单元测试命令
 npm run unit
 
-# run all tests
+# 全流程测试
 npm test
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
