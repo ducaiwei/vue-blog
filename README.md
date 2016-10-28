@@ -34,7 +34,7 @@ Topics主键，Topics数据通过用http-proxy-middleware代理到cnode获取的
 
 群聊天，个人中心，技术分享
 
-> a vue test demo
+> a vue blog
 
 ## Build Setup
 
