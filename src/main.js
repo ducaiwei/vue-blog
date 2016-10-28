@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App'
 import ChatRoom from './ChatRoom'
+import Chat from './components/Chat'
 import Topics from './components/Topics'
 import './assets/css/normalize.css'
 /* eslint-disable no-new */
@@ -15,7 +16,11 @@ const router = new VueRouter({
 		component: Topics
 	},
 	{
-		path: '/chat',
+		path: '/chatroom',
+		component: ChatRoom
+	},
+	{
+		path: '/chatroom',
 		component: ChatRoom
 	}
 	]

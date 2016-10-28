@@ -71,6 +71,7 @@ Util.Ajax = function(paramSetting){
 		xhr.removeEventListener('readystatechange',xhrEnd,false);
 	}
 }
+//post请求
 Util.post = function(pathname, data, success, error){
 	let setting = {
 		url:pathname,
@@ -82,6 +83,7 @@ Util.post = function(pathname, data, success, error){
 	};
 	return Util.Ajax(setting);
 }
+//get请求
 Util.get = function(pathname, data, success, error){
 	let setting = {
 		url:pathname,
@@ -92,5 +94,9 @@ Util.get = function(pathname, data, success, error){
 		error:error || function () {}
 	};
 	return Util.Ajax(setting);
+}
+//本地保存
+Util.localStorage = function(key,value){
+
 }
 export{ Util }

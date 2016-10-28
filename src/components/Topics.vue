@@ -73,7 +73,7 @@
 	}
 </style>
 <script>
-	import { Util } from './util';
+	import { Util } from '../js/util';
 	export default{
 		name:'Topics',
 		data () {

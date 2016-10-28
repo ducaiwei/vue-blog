@@ -13,7 +13,7 @@ export default {
     return {
       items: [
         { msg: '首页' , isOn:true , linkTo:'/'},
-        { msg: '唠嗑' , isOn:false , linkTo:'/chat' },
+        { msg: '唠嗑' , isOn:false , linkTo:'/chatroom' },
         { msg: '分享' , isOn:false , linkTo:'/share' },
         { msg: '我的' , isOn:false , linkTo:'/my' }
       ]
@@ -41,7 +41,11 @@ export default {
     line-height:40px;
     font-size:12px;
   }
-  .bottom-ul li.on{
+  .bottom-ul li a.on{
     color:red;
+  }
+  .bottom-ul li a{
+    color:#888;
+    text-decoration:none;
   }
 </style>
