@@ -33,6 +33,7 @@ Topics主键，Topics数据通过用http-proxy-middleware代理到cnode获取的
 5.app.vue中导入topics组件。
 
 6.vue-router使用
+
 在main.js中注册vue-router,底部导航菜单加上router-link。实现了单页路由。
 
 待完善的功能
