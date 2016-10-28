@@ -18,6 +18,7 @@ vue功能（看了文档的一点总结，望大神能补充）
 npm install vue-cli -g
 
 3.用vue-cli命令构建项目。
+
 vue init <template-name><project-name>
 
 目前可以使用的官方的模板包括webpack、webpack-simple、browserify、browserify-simple、simple。也可以使用自己的。
