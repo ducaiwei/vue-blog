@@ -50,7 +50,7 @@
 	}
 </style>
 <script>
-import { Client } from './js/chat-client.js'
+import { CHAT_CLIENT } from './js/chat-client.js'
 export default {
   name: 'Chatroom',
   data () {
@@ -63,7 +63,7 @@ export default {
           alert('请输入名号！');
           return;
         }
-        Client.connect();
+        CHAT_CLIENT.connect();
     }
   }
 }
